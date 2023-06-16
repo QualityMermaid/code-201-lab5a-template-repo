@@ -60,13 +60,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let totalSum = a + b + c
-    let totalProduct = a * b * c
-    let totalMessage = "4 and 7 and 5 sum to 16."
-    let productMessage = "The product of 4 and 7 and 5 is 140."
+    let firstSum = sum(a, b)[0]
+    let secondSum = sum(firstSum, c)[0]
+
+    let firstMulti = multiply(a, b)[0]
+    let secodMulty = multiply(firstMulti, c)[0]
+
+    let totalMessage = a + " and " + b + " and " + c + " sum to " + secondSum + "."
+    let productMessage = "The product of " + a + " and " + b + " and " + c + " is " + secodMulty + "."
+    console.log(secondSum)
+    // console.log(totalProduct)
+    
     console.log(totalMessage)
     console.log(productMessage)
-    return [totalSum,totalProduct , totalMessage, productMessage]
+    return [secondSum, secodMulty, totalMessage, productMessage]
+    
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
