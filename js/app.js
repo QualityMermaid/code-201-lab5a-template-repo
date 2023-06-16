@@ -89,7 +89,18 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+    let total = 0
+    for (let i = 0; i < sumArr.length; i++ ){
+        let result = sum(sumArr[i],total)
+        total = result[0]
+        console.log(total)
+    }
+    const message = 
+
+    console.log(total + "out of loop")
+    return [total, message]
 }
+sumArray([3,5,7])
 
 // Here is the test for sumArray(); uncomment it to run it
 
